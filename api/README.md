@@ -4,3 +4,6 @@
 
 1. publique o jwt 
 `php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"`
+
+2. Generate secret key
+`php artisan jwt:secret`

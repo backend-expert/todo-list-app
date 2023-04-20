@@ -18,7 +18,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
         'password',
     ];
@@ -30,7 +31,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token',
+        // 'remember_token',
     ];
 
     /**
@@ -41,4 +42,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    /**
+     * This PHP function returns a collection of related Todo objects.
+     *
+     * @return hasMany relationship between the current model and the `Todo` model is being returned.
+     * Specifically, a one-to-many relationship where the current model has many `Todo` instances.
+     */
+    public function todo(){
+        return $this->hasMany(Todo::class);
+    }
 }
