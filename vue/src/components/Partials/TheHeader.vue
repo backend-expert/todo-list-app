@@ -1,6 +1,6 @@
-<template lang="">
+<template>
     <div>
-        
+
         
     </div>
 </template>
@@ -9,6 +9,6 @@ export default {
     
 }
 </script>
-<style lang="">
+<style>
     
 </style>
