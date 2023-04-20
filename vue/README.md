@@ -17,3 +17,9 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Axios
+`npm install axios`
+
+## Cookie
+`npm add js-cookie`

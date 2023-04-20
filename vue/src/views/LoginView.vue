@@ -31,6 +31,7 @@
 <script>
 // import LoginMenu from '@/components/Auth/LoginMenu';
 import axios from '@/plugins/axios';
+import Cookie from 'js-cookie';
 
 export default {
     name: 'Login',
@@ -55,7 +56,11 @@ export default {
 
             //conexao ajax
             axios.post('/login', payload).then((response) => {
-                console.log(response);
+                const token = `${response.data.token_type} ${response.data.access_token}`; 
+
+                Cookie.set('_todolist_token', token, {
+                    expires:30
+                });
             });
 
         },
