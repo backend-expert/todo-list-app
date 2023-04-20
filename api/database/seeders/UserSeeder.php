@@ -16,8 +16,8 @@ class UserSeeder extends Seeder
     public function run()
     {
         \App\Models\User::factory()->create([
-        "first_name"=> 'isaque',
-        "last_name"=> 'menezes',
+            "first_name"=> 'isaque',
+            "last_name"=> 'menezes',
             "email"=>'isaque@admin.com',
             "password"=> bcrypt('admin')
 
@@ -33,7 +33,7 @@ class UserSeeder extends Seeder
         //     ]
         // );
 
-        // \App\Models\User::factory(11)->create();
+        \App\Models\User::factory(11)->create();
 
 
     }

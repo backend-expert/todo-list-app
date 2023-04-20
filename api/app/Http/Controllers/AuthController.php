@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\AuthLoginRquest;
+use App\Http\Requests\AuthLoginRequest;
 use App\Services\AuthService;
 use Illuminate\Http\Request;
-// use App\Service\AuthService;
+
 
 class AuthController extends Controller
 {
@@ -16,10 +16,11 @@ class AuthController extends Controller
         $this->authService = $authService;
 
     }
-    public function login(AuthLoginRquest $request){
+    public function login(AuthLoginRequest $request){
         // dd('tesette login v1');
-        $input = $request->validate();
+        $input = $request->validated();
         dd($input);
+
         $this->authService->login();
     }
 }
